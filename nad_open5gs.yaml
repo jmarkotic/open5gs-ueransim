@@ -1,7 +1,6 @@
 apiVersion: "k8s.cni.cncf.io/v1"
 kind: NetworkAttachmentDefinition
 metadata:
-  name: n3 
   namespace: open5gs
 spec:
   config: '{
