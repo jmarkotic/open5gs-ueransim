@@ -1,0 +1,22 @@
+podAnnotations: { k8s.v1.cni.cncf.io/networks: '[ { "name": "n3","ips": [ "172.16.11.101/24" ] } ]' }
+config:
+  upf:
+    gtpu:
+      dev: "net1"
+      advertise: "172.16.11.101"
+  smf:
+    pfcp:
+      addr: 192.168.25.24
+      hostname: 192.168.25.24
+    gtpc:
+      addr: 192.168.25.26
+      hostname: 192.168.25.26
+    frdi:
+      addr: 192.168.25.27
+      hostname: 192.168.25.27
+
+services:
+  pfcp:
+    type: LoadBalancer
+    loadBalancerIP: 192.168.25.25
+
