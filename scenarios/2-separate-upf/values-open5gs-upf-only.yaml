@@ -1,0 +1,16 @@
+podAnnotations: { k8s.v1.cni.cncf.io/networks: '[ { "name": "n3","ips": [ "172.16.11.101/24" ] } ]' }
+config:
+  upf:
+    gtpu:
+      dev: "net1"
+      advertise: "172.16.11.101"
+  smf:
+    pfcp:
+      addr: 172.16.10.21 
+      hostname: 172.16.10.21 
+
+services:
+  pfcp:
+    type: LoadBalancer
+    loadBalancerIP: 172.16.10.45
+
