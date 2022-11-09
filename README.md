@@ -2,3 +2,6 @@
 
 Helm, Csar, manifests to deploy envrionment with open5gs 5GC and Ueransim RAN simulator.
 
+Differnet scenarions supported - description inside scenarios folders
+
+
